@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Post</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        h2{
+            color: rgb(238, 225, 235);
+        }
+    </style>
+</head>
+<body>
+    <h1>See your post in detail</h1>
+    <h3>@<%=post.username%></h3>
+    <h3>id:<%= post.id %></h3>
+    <h3><img src="<%= post.src %>" alt="some random image"></h3>
+    <h3>Caption:<%=post.caption%></h3>
+</body>
+</html>

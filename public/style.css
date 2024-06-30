@@ -1,0 +1,24 @@
+h1{
+    color:  #feda75;
+}
+
+img{
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+}
+.caption{
+    color: #333333;
+}
+body{
+    background: linear-gradient(45deg, #e2a80a, #fa7e1e, #d62976, #962fbf);
+    
+}
+a{
+    /* text-decoration: none; */
+    color: black;
+}
+.see{
+    color: white;
+    
+}

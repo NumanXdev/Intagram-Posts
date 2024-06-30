@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      body{
+        background: #feda75;
+      }
+    </style>
+</head>
+<body>
+    <h2>Edit your post</h2>
+    <h3>username: <%= post.username %></h3>
+    <h4>id: <%= post.id %></h4>
+    
+    
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+       <textarea rows="7" cols="30" name="caption"><%=post.caption%></textarea>
+       <button>Submit</button>
+    </form>
+</body>
+</html>

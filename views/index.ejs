@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>See Posts</title>
+    <link rel="stylesheet" href="/style.css" />
+   
+  </head>
+  <body>
+    <h1>Instagram Posts</h1>
+
+    <%for(post of posts){%>
+    <div class="post">
+      <h3 class="username">@<%=post.username%></h3>
+      <img src="<%= post.src %>" alt="some Image">
+    <strong><p class="caption">Caption: <%=post.caption%></p></strong>  
+
+      <strong><a class="see" href="http://localhost:8080/posts/<%= post.id %> ">See more...</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong><a class="see" href="http://localhost:8080/posts/<%= post.id %>/edit ">Edit post</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+        <button class="delete">Delete Post</button>
+    </form>
+    </div>
+    <br>
+    <%}%>
+
+   
+   <button><a style="text-decoration: none;" href="http://localhost:8080/posts/new">Create Post</a></button> 
+
+    <br /><br />
+  </body>
+</html>
